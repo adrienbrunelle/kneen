@@ -1,5 +1,5 @@
-Tout les fichiers doivent être placé à la racine.
+All files should be placed in the root.
 
-Le fichier config se trouver dans class/config.php
+The config file is found in class/config.php
 
-Et l'ensemble des tables dans le fichier kneen.sql
+And all tables in the file kneen.sql
