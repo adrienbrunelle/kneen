@@ -18,9 +18,11 @@ class TestOfLogging extends UnitTestCase {
 		//$this->assertTrue(Surveys::addSurvey("Test ?","","1"));
 		
 		//Members
-		$this->assertTrue(Members::login("ab","aa")=="1");
-		$this->assertFalse(Members::login("aaaaa","aa")=="1");
+		$this->assertTrue(Members::login("ab","aa"));
+		$this->assertFalse(Members::login("aaaaa","aa"));
 		//
+		
+		//print_r(Surveys::getSurveyAnswerList(8));
 
     }
 }

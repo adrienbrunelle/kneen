@@ -1,15 +1,15 @@
-<?php session_start(); 
-
+<?php 
+session_start(); 
 include 'header.php';
-
 ?>
+	
 
-
-<div id="middle">
-<div id="alerte">Erreur !</div>
-<div id="ok">Ok !</div>
-
-
+  <div class="container">
+   
+  <div id="alerteok" style="display:none;" class="alert alert-success alert-dismissable">
+  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>OK</div>
+<div id="alerte" style="display:none;" class="alert alert-danger alert-dismissable">
+  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Erreur</div>
 
 
 <?php
@@ -33,17 +33,17 @@ switch($page)
 		include 'register.php';
 		break;
 		
+	case 'about':
+		include 'about.php';
+		break;
+		
 	default:
 		include 'home.php';
 		break;
 }
 ?>
 	
-	
-</div>
 
-
-</div>
 
 <?php 
 include 'footer.php';

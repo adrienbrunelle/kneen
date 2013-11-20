@@ -1,15 +1,17 @@
 <?php
-session_start();
+session_start(); 
+include 'members.php';
 
-if (isset($_POST['login']) && isset($_POST['password']) && !isset($_SESSION['pseudo']))
+if (isset($_POST['email']) && isset($_POST['password']) && !isset($_SESSION['userId']))
 {
-	$_SESSION['pseudo'] = '1';
-	echo "1";
+	if (Members::login($_POST['email'],$_POST['password']))
+		echo "1";
+	else 
+		echo "0";
 	
 }
 else
-{
 	echo "0";
-}
+
 
 ?>
